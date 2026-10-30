@@ -33,4 +33,16 @@ public class Tetromino {
     public void setY(int y) {
         this.y = y;
     }
+
+    public int[][] getShape() {
+        return shape;
+    }
+
+    public int coloridx() {
+        return coloridx;
+    }
+
+    public void moveleft() {
+        x--;
+    }
 }
