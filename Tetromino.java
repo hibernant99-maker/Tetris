@@ -45,4 +45,12 @@ public class Tetromino {
     public void moveleft() {
         x--;
     }
+
+    public void moveRight() {
+        x++;
+    }
+
+    public void moveDown() {
+        y++;
+    }
 }
