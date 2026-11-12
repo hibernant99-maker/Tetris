@@ -17,14 +17,18 @@ public class Board extends JPanel implements ActionListener {
     private static final int[] horizontal_kicks = { 0, -1, 1, -2, 2 };
     private static final Color[] colors = { Color.CYAN, Color.BLUE, Color.ORANGE, Color.YELLOW, Color.GREEN,
             Color.MAGENTA, Color.RED };
-    private final int[][][]shapes={
-        {{1,1,1,1}},{{1,0,0},{1,1,1}},{{0,0,1},{1,1,1}},
-        {{1,1},{1,1}},{{0,1,1},{1,1,0}},{{0,1,0},{1,1,1}},
-        {{1,1,0},{0,1,1}}               
+    private final int[][][] shapes = {
+            { { 1, 1, 1, 1 } }, { { 1, 0, 0 }, { 1, 1, 1 } }, { { 0, 0, 1 }, { 1, 1, 1 } },
+            { { 1, 1 }, { 1, 1 } }, { { 0, 1, 1 }, { 1, 1, 0 } }, { { 0, 1, 0 }, { 1, 1, 1 } },
+            { { 1, 1, 0 }, { 0, 1, 1 } }
     };
     private int[][] board = new int[B_width][B_height];
-          
-
+    private final Queue<Integer> nextpieces = new ArrayDeque<>();
+    private final List<Integer> pieceBag = new ArrayList<>();
+    private final Timer timer;
+    private final GameCanvas gameCanvas;
+    private Tetromino currentPiece;
+    private JButton pauseButton;
 
 }
 
