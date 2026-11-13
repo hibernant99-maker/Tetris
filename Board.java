@@ -35,7 +35,22 @@ public class Board extends JPanel implements ActionListener {
     private boolean is_Hold = true;
     private boolean isPause;
     private boolean is_gameover;
-    
+
+    public Board() {
+            setLayout(new BorderLayout());
+            setBackground(new Color(16, 19, 27));
+            setPreferredSize(new Dimension(400, 690));
+            gameCanvas = new GameCanvas();
+            add(gameCanvas, BorderLayout.CENTER);
+            add(createControls(), BorderLayout.SOUTH);
+            timer = new Timer(START_DELAY, this);
+            timer.setCoalesce(true);
+            fillNextQueue();
+            spawnNextPiece();
+            installKeyBindings();
+            timer.start();
+            
+    }
 
 }
 
