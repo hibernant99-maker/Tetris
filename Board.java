@@ -29,6 +29,13 @@ public class Board extends JPanel implements ActionListener {
     private final GameCanvas gameCanvas;
     private Tetromino currentPiece;
     private JButton pauseButton;
+    private int heldTyep = -1;
+    private int lines;
+    private int level = 1;
+    private boolean is_Hold = true;
+    private boolean isPause;
+    private boolean is_gameover;
+    
 
 }
 
