@@ -49,7 +49,11 @@ public class Board extends JPanel implements ActionListener {
             spawnNextPiece();
             installKeyBindings();
             timer.start();
-            
+
+    }
+
+    private JPanel createControls() {
+            JPanel controls = new JPanel(new GridBagLayout(2, 4, 6, 6));
     }
 
 }
