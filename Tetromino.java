@@ -38,6 +38,10 @@ public class Tetromino {
         return shape;
     }
 
+    public void setShape(int[][] shape) {
+        this.shape = shape;
+    }
+
     public int coloridx() {
         return coloridx;
     }
